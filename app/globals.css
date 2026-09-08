@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #f4f6f8;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 56px 0 40px;
+}
+
+.hero {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4b5563;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: clamp(36px, 6vw, 64px);
+  line-height: 0.98;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.subtitle {
+  max-width: 760px;
+  margin-bottom: 0;
+  color: #4b5563;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.panel {
+  border: 1px solid #d7dde5;
+  border-radius: 18px;
+  background: #ffffff;
+  padding: 24px;
+  box-shadow: 0 12px 36px rgba(17, 24, 39, 0.08);
+}
+
+.panelHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.status {
+  border: 1px solid #111827;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding-top: 20px;
+}
+
+.stage {
+  display: flex;
+  gap: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.stage strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.stage p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.number {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border-radius: 50%;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+footer {
+  padding: 18px 4px 0;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .shell {
+    width: min(100% - 20px, 1120px);
+    padding-top: 28px;
+  }
+
+  .panelHeader {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
